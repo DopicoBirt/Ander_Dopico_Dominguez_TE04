@@ -9,6 +9,7 @@ async function iniciar() {
     const paises = await obtenerPaises();
     const conPoblacion = paises.filter(p => p.poblacion !== null);
     conPoblacion.sort((a, b) => b.poblacion - a.poblacion);
+    const total = conPoblacion.reduce((suma, p) => suma + p.poblacion, 0);
 
     conPoblacion.forEach((pais, i) => {
       const fila = document.createElement("tr");
@@ -18,6 +19,9 @@ async function iniciar() {
         <td>${pais.region}</td>
         <td>${pais.capital}</td>
         <td>${pais.poblacion.toLocaleString("es-ES")}</td>
+        <td>${(pais.poblacion / total * 100).toFixed(2)} %</td>
+        <td>${pais.ingresos}</td>
+        <td><a href="views/detalle.html?codigo=${pais.codigo}">Ver detalle</a></td>
       `;
       cuerpo.appendChild(fila);
     });

@@ -24,3 +24,10 @@ export async function obtenerPaises() {
 
   return listaPaises;
 }
+
+export async function obtenerHistorico(codigo) {
+  const url = `https://api.worldbank.org/v2/country/${codigo}/indicator/SP.POP.TOTL?format=json&date=2014:2023`;
+  const resp = await fetch(url);
+  const datos = await resp.json();
+  return datos[1].map(d => ({ anio: d.date, poblacion: d.value }));
+}

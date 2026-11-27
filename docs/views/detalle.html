@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CountryApp - Detalle</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>CountryApp</h1>
+    <nav>
+      <a href="../index.html">Resumen</a>
+      <a href="favoritos.html">Favoritos</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="tituloPais">Cargando...</h2>
+
+    <label for="selectComparar">Comparar con:</label>
+    <select id="selectComparar"></select>
+    <button id="btnOrden">Ordenar ↑↓</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Año</th>
+          <th id="colPais1">País</th>
+          <th id="colPais2">Comparado</th>
+          <th>Diferencia</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpoComparativa"></tbody>
+    </table>
+  </main>
+
+  <script type="module" src="../js/main/detalle.js"></script>
+</body>
+</html>
