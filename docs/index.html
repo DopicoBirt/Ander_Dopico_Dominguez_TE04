@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CountryApp - Resumen</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>CountryApp</h1>
+    <nav>
+      <a href="index.html">Resumen</a>
+      <a href="views/favoritos.html">Favoritos</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Ranking de países por población (2023)</h2>
+    <p id="cargando">Cargando datos...</p>
+    <p id="error"></p>
+    <table id="tablaRanking">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>País</th>
+          <th>Región</th>
+          <th>Capital</th>
+          <th>Población</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpoRanking"></tbody>
+    </table>
+  </main>
+
+  <script type="module" src="js/main/resumen.js"></script>
+</body>
+</html>
