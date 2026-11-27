@@ -9,8 +9,9 @@
 <body>
   <header>
     <h1>CountryApp</h1>
+    <input type="search" id="buscador" placeholder="Buscar país...">
     <nav>
-      <a href="index.html">Resumen</a>
+      <a href="index.html" class="activo">Resumen</a>
       <a href="views/favoritos.html">Favoritos</a>
     </nav>
   </header>
@@ -30,11 +31,24 @@
           <th>% mundial</th>
           <th>Renta</th>
           <th></th>
+          <th>Fav</th>
         </tr> 
       </thead>
       <tbody id="cuerpoRanking"></tbody>
     </table>
   </main>
+
+<footer>
+    <h3>Cómo funciona</h3>
+    <ul>
+      <li><strong>Ranking:</strong> al cargar la página se piden los datos a la API del Banco Mundial y se ordenan por población.</li>
+      <li><strong>Evento click (☆/★):</strong> marca o desmarca un país como favorito. Se guarda en localStorage.</li>
+      <li><strong>Comparar:</strong> abre la página de comparación del país con su población de 2014 a 2023.</li>
+      <li><strong>Evento change (comparar):</strong> al elegir otro país en el desplegable se actualiza la tabla comparativa.</li>
+      <li><strong>Evento click (Ordenar):</strong> cambia el orden de los años, de más antiguo a más reciente o al revés.</li>
+      <li><strong>Evento click (Quitar):</strong> borra un país de la página de favoritos.</li>
+    </ul>
+</footer> 
 
   <script type="module" src="js/main/resumen.js"></script>
 </body>
